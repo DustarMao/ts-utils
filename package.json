@@ -5,8 +5,12 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "mocha -r ts-node/register \"spec/**/*.spec.{ts,js}\"",
+    "mocha": "mocha -r ts-node/register -b \"test/**/*.{ts,js}\"",
+    "nyc": "nyc npm run mocha",
+    "codecov": "nyc report --reporter=json && codecov -f coverage/*.json",
     "build": "tsc --module es2015 --target es2017",
+    "test": "npm run nyc",
+    "posttest": "npm run codecov",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -23,8 +27,15 @@
     "@types/chai": "^4.0.7",
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
+    "codecov": "^3.0.0",
     "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "ts-node": "^3.3.0",
     "typescript": "^2.6.2"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ]
   }
 }
