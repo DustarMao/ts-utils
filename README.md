@@ -1,4 +1,4 @@
 # Typescript Node Utils
 
-[![CircleCI](https://circleci.com/gh/DustarMao/ts-utils/tree/master.svg?style=svg)](https://circleci.com/gh/DustarMao/ts-utils/tree/master)
-[![codecov](https://codecov.io/gh/DustarMao/ts-utils/branch/master/graph/badge.svg)](https://codecov.io/gh/DustarMao/ts-utils)
+[![CircleCI](https://img.shields.io/circleci/project/github/DustarMao/ts-utils.svg?style=flat-square)](https://circleci.com/gh/DustarMao/ts-utils)
+[![Codecov](https://img.shields.io/codecov/c/github/DustarMao/ts-utils.svg?style=flat-square)](https://codecov.io/gh/DustarMao/ts-utils)
