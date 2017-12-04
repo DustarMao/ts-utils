@@ -1,0 +1,30 @@
+{
+  "name": "ts-utils",
+  "version": "0.0.1",
+  "description": "typescript node utils",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register \"spec/**/*.spec.{ts,js}\"",
+    "build": "tsc --module es2015 --target es2017",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DustarMao/ts-utils.git"
+  },
+  "author": "DustarM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DustarMao/ts-utils/issues"
+  },
+  "homepage": "https://github.com/DustarMao/ts-utils#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.7",
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.2"
+  }
+}
