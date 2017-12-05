@@ -14,6 +14,9 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
+    environment:
+    - COVERALLS_REPO_TOKEN: VJBTU8BiSi4iedfwpq0EjP2snZY83op1T
+
     working_directory: ~/repo
 
     steps:
@@ -37,4 +40,4 @@ jobs:
       - run: npm test
 
       # coveralls
-      - run: COVERALLS_REPO_TOKEN=VJBTU8BiSi4iedfwpq0EjP2snZY83op1T && npm run coveralls
+      - run: npm run coveralls
