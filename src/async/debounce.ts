@@ -1,5 +1,5 @@
 export function debounce<F extends (...args: any[]) => Promise<any>>(fn: F, window: number): F {
-  let timer: number = null
+  let timer: NodeJS.Timer = null
   let resolves: Function[] = []
   return function() {
     if (timer !== null) clearTimeout(timer)
