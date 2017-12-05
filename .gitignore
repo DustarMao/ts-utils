@@ -9,3 +9,7 @@ lib
 
 # code coverage
 coverage
+
+# ide
+.idea
+.vscode

@@ -7,7 +7,7 @@
   "scripts": {
     "mocha": "mocha --opts test/mocha.opts -b",
     "nyc": "nyc mocha --opts test/mocha.opts",
-    "coveralls": "nyc report --reporter=text-lcov | cross-env COVERALLS_REPO_TOKEN=VJBTU8BiSi4iedfwpq0EjP2snZY83op1T coveralls",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "build": "tsc --module es2015 --target es2017",
     "test": "npm run nyc",
     "postinstall": "npm run build"
@@ -27,7 +27,6 @@
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
-    "cross-env": "^5.1.1",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
     "ts-node": "^3.3.0",

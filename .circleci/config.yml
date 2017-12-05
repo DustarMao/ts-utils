@@ -37,4 +37,4 @@ jobs:
       - run: npm test
 
       # coveralls
-      - run: npm run coveralls
+      - run: COVERALLS_REPO_TOKEN=VJBTU8BiSi4iedfwpq0EjP2snZY83op1T && npm run coveralls
