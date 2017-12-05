@@ -7,7 +7,7 @@ describe("delay", function() {
     const beg = Date.now()
     const timeout = 20
     await delay(timeout, () => {
-      expect(Date.now()).greaterThan(beg + timeout)
+      expect(Date.now()).not.lessThan(beg + timeout)
     })
   })
 
