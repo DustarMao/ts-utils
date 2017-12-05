@@ -5,12 +5,11 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "mocha": "mocha -r ts-node/register -b \"test/**/*.{ts,js}\"",
-    "nyc": "nyc npm run mocha",
-    "codecov": "nyc report --reporter=json && codecov -f coverage/*.json",
+    "mocha": "mocha --opts test/mocha.opts -b",
+    "nyc": "nyc mocha --opts test/mocha.opts",
+    "coveralls": "nyc report --reporter=text-lcov | cross-env COVERALLS_REPO_TOKEN=VJBTU8BiSi4iedfwpq0EjP2snZY83op1T coveralls",
     "build": "tsc --module es2015 --target es2017",
     "test": "npm run nyc",
-    "posttest": "npm run codecov",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -27,7 +26,8 @@
     "@types/chai": "^4.0.7",
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
-    "codecov": "^3.0.0",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.1",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
     "ts-node": "^3.3.0",
