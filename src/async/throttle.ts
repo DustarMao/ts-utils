@@ -9,7 +9,7 @@ export function throttle<F extends (...args: any[]) => Promise<any>>(fn: F): F {
     if (typeof promises[argToken] !== "object") {
       promises[argToken] = (async () => {
         try {
-          return await fn.apply(this, arguments)
+          return await fn.apply(this, args)
         } finally {
           delete promises[argToken]
         }
